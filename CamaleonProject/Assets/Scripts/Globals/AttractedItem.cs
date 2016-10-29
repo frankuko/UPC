@@ -17,6 +17,7 @@ public class AttractedItem : MonoBehaviour {
 	void Update () 
 	{
 		vectorDir = GetComponent<Rigidbody>().position - rb.GetComponent<Rigidbody>().position;
+		vectorDir.Normalize();
 
 		if(Input.GetKey(KeyCode.A))
 		{
