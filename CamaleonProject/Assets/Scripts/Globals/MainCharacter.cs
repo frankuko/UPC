@@ -7,7 +7,7 @@ public class MainCharacter : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
-		moveSpeed = 8.0f;
+		moveSpeed = 35.0f;
 	}
 	
 	// Update is called once per frame
@@ -16,7 +16,7 @@ public class MainCharacter : MonoBehaviour {
 		transform.Translate(moveSpeed*Input.GetAxis("Horizontal")*Time.deltaTime,0.0f,0.0f);
 		if(Input.GetKeyDown(KeyCode.Space))
 		{
-			GetComponent<Rigidbody>().AddForce(0,500,0);
+			GetComponent<Rigidbody>().AddRelativeForce(new Vector3 (0,5000,0));
 		}
 	}
 }
